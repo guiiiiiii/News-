@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+h1{
+	text-shadow:5px 5px 5px magenta, 7px 7px 7px yellow;
+}
+form{
+	border:2px solid magenta;
+	padding:5px 10px 10px 10px;
+}
+input[type=image]{ <!-- input의 특정 타입에만 css효과를 주고싶다면 이런식으루! -->
+	width:20px;
+	height:20px;
+	box-shadow:2px 2px 2px grey;
+	padding:2px;
+	border-radius:2px;
+}
+</style>
+</head>
+<body>
+<h1>로또 번호를 맞춰보세요!!</h1>
+<br><hr>
+<form action='/mvc/lotto2' method='get'>
+1부터 6까지의 숫자를 입력하세요: <input type='number' min=1 max=6 name='num' required>
+<!-- 버튼을 쓰는게 더 예쁘지만 이러면 여러번 새로고침해서 전송할때 같은 값을 넣어서 보내면 캐시된 거를 사용해서
+가져오기 때문에 약간 우리의 코딩 의도와 맞지않어(항상 랜덤값으로 새로 받음) 그래서 inputtype에 image를 사용해서
+사용! image타입은 submit이 form에 없을 때 대신 submit기능을 대체? 하는 역할을 함 -->
+<!-- <button><img src='/edu/images/clover.png' width=20></button>  -->
+<input type='image' src='/edu/images/clover.png' width=20>
+<!-- <input type='hidden' name='1'> -->
+
+</form>
+</body>
+</html>

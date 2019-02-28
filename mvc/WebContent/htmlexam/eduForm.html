@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+form{
+   border:1px solid black;
+   border-radius: 20px;
+   padding:20px;
+   width: 50%;
+   margin:auto;
+   background: radial-gradient(ellipse, red, green, yellow) ;
+
+}
+hr{
+   color:white;
+}
+</style>
+</head>
+<body>
+
+<form action='/mvc/EduServlet' method='post'>
+<h1>성적을 입력하시오.</h1><br><hr>
+이름: <input type='text' name='name' required> <br>
+평균 점수: <input type='number' name='score' min=0 max=100 required><br><br><br>
+<input type='submit' value='전송'>&nbsp;&nbsp;<input type='reset' value='재전송'>
+</form>
+</body>
+</html>
